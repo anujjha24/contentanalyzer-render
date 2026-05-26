@@ -326,7 +326,7 @@ def run_comparison(file_bytes: bytes, original_name: str) -> tuple:
 
         shutil.copy(COMPARISON_SCRIPT, Path(tmpdir) / "barc_nct_comparison.py")
 
-        run_comparison()
+        run_comparison(file_bytes, original_name)
 
         output_path = Path(tmpdir) / "barc_nct_comparison.xlsx"
         if not output_path.exists():
